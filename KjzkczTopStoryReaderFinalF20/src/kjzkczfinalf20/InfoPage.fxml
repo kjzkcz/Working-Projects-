@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kjzkczfinalf20.InfoPageController">
+   <children>
+      <Button layoutX="400.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#showHelp" prefHeight="142.0" prefWidth="331.0" text="Help" />
+      <Button fx:id="aboutPageButton" layoutX="69.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#showAbout" prefHeight="142.0" prefWidth="331.0" text="About" />
+      <Button layoutX="317.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToPg1" text="Go Back to Top Story Viewer" />
+      <Label layoutX="181.0" layoutY="413.0" prefHeight="25.0" prefWidth="468.0" text="Thank you for using my application! It was a blast to learn about using api's!" />
+   </children>
+</AnchorPane>
