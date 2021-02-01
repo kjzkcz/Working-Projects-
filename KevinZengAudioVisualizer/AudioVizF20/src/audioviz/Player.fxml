@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Author: Professor Wergeles -->
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="618.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="audioviz.PlayerController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+            </items>
+          </Menu>
+          <Menu fx:id="visualizersMenu" mnemonicParsing="false" text="Visualizers" />
+            <Menu fx:id="bandsMenu" mnemonicParsing="false" text="Bands" />
+        </menus>
+      </MenuBar>
+      <AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="800.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@player.css" />
+          </stylesheets>
+         <children>
+            <AnchorPane fx:id="vizPane" layoutX="14.0" layoutY="71.0" prefHeight="352.0" prefWidth="771.0" />
+            <Button fx:id="playPause" layoutX="367.0" layoutY="526.0" mnemonicParsing="false" onAction="#handlePlayPause" prefHeight="27.0" prefWidth="65.0" text="Play" />
+            <Text fx:id="errorText" fill="RED" layoutX="25.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="25.0" layoutY="203.0" />
+            <Text fx:id="filePathText" layoutX="34.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="732.0" />
+            <Text fx:id="visualizerNameText" layoutX="538.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="153.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <Label layoutX="693.0" layoutY="524.0" text="Bands:" />
+            <Text fx:id="bandsText" layoutX="738.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="35.0" />
+            <Button layoutX="377.0" layoutY="570.0" mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+            <Slider fx:id="volumeSlider" layoutX="462.0" layoutY="525.0" onMouseReleased="#handleVolumeSliderMouseReleased" />
+            <Text fx:id="volumeLevelText" layoutX="614.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--%" wrappingWidth="46.0" />
+            <Slider fx:id="timeSlider" layoutX="43.0" layoutY="541.0" onMousePressed="#handleSliderMousePressed" onMouseReleased="#handleSliderMouseReleased" prefHeight="25.0" prefWidth="242.0" />
+            <ProgressBar fx:id="songVisualBar" layoutX="43.0" layoutY="523.0" prefWidth="242.0" progress="0.0" />
+            <Label layoutX="40.0" layoutY="565.0" text="Time:" />
+            <Text fx:id="currentText" layoutX="77.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00.00s" wrappingWidth="57.0" />
+            <Label layoutX="173.0" layoutY="565.0" text="Length:" />
+            <Text fx:id="lengthText" layoutX="225.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00.00s" wrappingWidth="57.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="0.0" prefWidth="800.0" />
+   </children>
+</VBox>
